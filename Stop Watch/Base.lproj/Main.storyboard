@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stop Watch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="Stop_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoR-uD-mFp">
+                                <rect key="frame" x="8" y="300" width="398" height="83.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGI-SI-dhe">
+                                <rect key="frame" x="16" y="407.66666666666669" width="74" height="22"/>
+                                <state key="normal" image="pause_icon"/>
+                                <connections>
+                                    <action selector="pauseBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZg-B7-iwK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-US-0L9">
+                                <rect key="frame" x="170" y="399.66666666666669" width="74" height="38"/>
+                                <state key="normal" image="start_button"/>
+                                <connections>
+                                    <action selector="startBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqR-Xw-Dhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-qv-ifA">
+                                <rect key="frame" x="324" y="407.66666666666669" width="74" height="22"/>
+                                <state key="normal" image="reset_button"/>
+                                <connections>
+                                    <action selector="resetBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1c-sg-ftu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dGI-SI-dhe" firstAttribute="centerY" secondItem="hBe-US-0L9" secondAttribute="centerY" id="3Zi-Qm-sMN"/>
+                            <constraint firstItem="hBe-US-0L9" firstAttribute="top" secondItem="LoR-uD-mFp" secondAttribute="bottom" constant="16" id="81q-8I-hgR"/>
+                            <constraint firstItem="bhW-qv-ifA" firstAttribute="top" secondItem="LoR-uD-mFp" secondAttribute="bottom" constant="24" id="AU1-wi-fd8"/>
+                            <constraint firstItem="hBe-US-0L9" firstAttribute="leading" secondItem="dGI-SI-dhe" secondAttribute="trailing" constant="80" id="EtF-fZ-fH2"/>
+                            <constraint firstItem="bhW-qv-ifA" firstAttribute="width" secondItem="hBe-US-0L9" secondAttribute="width" id="PAU-hU-uNi"/>
+                            <constraint firstItem="LoR-uD-mFp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="PT5-zY-qAu"/>
+                            <constraint firstItem="hBe-US-0L9" firstAttribute="centerY" secondItem="bhW-qv-ifA" secondAttribute="centerY" id="Q3W-3p-Uus"/>
+                            <constraint firstItem="bhW-qv-ifA" firstAttribute="width" secondItem="dGI-SI-dhe" secondAttribute="width" id="X4c-F8-FkS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LoR-uD-mFp" secondAttribute="trailing" constant="8" id="bSi-hn-Ph5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhW-qv-ifA" secondAttribute="trailing" constant="16" id="dV8-YN-aCE"/>
+                            <constraint firstItem="LoR-uD-mFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="gzo-MI-Puc"/>
+                            <constraint firstItem="dGI-SI-dhe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hc5-rk-bar"/>
+                            <constraint firstItem="dGI-SI-dhe" firstAttribute="top" secondItem="LoR-uD-mFp" secondAttribute="bottom" constant="24" id="msN-0c-FeC"/>
+                            <constraint firstItem="bhW-qv-ifA" firstAttribute="leading" secondItem="hBe-US-0L9" secondAttribute="trailing" constant="80" id="qWe-Xg-lOJ"/>
+                            <constraint firstItem="hBe-US-0L9" firstAttribute="width" secondItem="dGI-SI-dhe" secondAttribute="width" id="tHg-Tk-zCT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="dGI-SI-dhe" id="A5b-IB-fRu"/>
+                        <outlet property="resetButton" destination="bhW-qv-ifA" id="KEZ-GP-vpH"/>
+                        <outlet property="startButton" destination="hBe-US-0L9" id="0Tt-44-4nZ"/>
+                        <outlet property="timerLabel" destination="LoR-uD-mFp" id="AVk-bH-hBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause_icon" width="10.666666984558105" height="10.666666984558105"/>
+        <image name="reset_button" width="10.666666984558105" height="10.666666984558105"/>
+        <image name="start_button" width="10.666666984558105" height="10.666666984558105"/>
+    </resources>
+</document>
